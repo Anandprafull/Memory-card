@@ -1,0 +1,324 @@
+/* --------- Global style */
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Gluten', cursive;
+    color: #f0f8ff;
+    background-image: url(../images/underthesea.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 5vh;
+    font-family: 'Gluten', cursive;
+}
+
+h2 {
+    font-size: 3vh;
+    font-family: 'Gluten', cursive;
+}
+
+h3 {
+    font-size: 3vh;
+    font-family: 'Gluten', cursive;
+    color: rgb(204, 85, 204);
+}
+
+h4 {
+    font-size: 3vh;
+    font-family: 'Gluten', cursive;
+    color: #f0f8ff;
+    font-weight: 200;
+}
+
+p {
+    font-size: 2vh;
+    font-family: 'Dongle', sans-serif;
+    color: #f0f8ff;
+}
+
+.how-to-play {
+    font-size: 2vh;
+}
+
+/* --------- Buttons */
+
+.button {
+    width: 200px;
+    height: 50px;
+    background-color: #8b008b;
+    color: snow;
+    border: solid;
+    padding: 10px;
+}
+
+.button-sm {
+    width: 150px;
+    height: 30px;
+    background-color: #8b008b;
+    color: snow;
+    border: solid;
+    font-size: small;
+    vertical-align: middle;
+    margin: 5px;
+}
+
+.start-button {
+    background: #004085;
+}
+
+.option-buttons {
+    text-align: center;
+    padding: 20px;
+}
+
+/* --------- /. Buttons */
+
+/* --------- Welcome Page */
+#player-name {
+    font-size: 3vh;
+}
+
+#welcome-message {
+    display: none;
+}
+
+/* --------- bubbles */
+
+.bubbles {
+    height: 100px;
+    width: 100px;
+}
+
+.bubble-container {
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+}
+
+#bubble1 {
+    position: relative;
+    float: left;
+    animation: floatBubble 7.5s infinite  normal ease-out;
+    z-index: 1000;
+}
+
+#bubble2 {
+    position: relative;
+    float: right;
+    animation: floatBubble 8s infinite  normal ease-out;
+    z-index: 900;
+}
+
+#bubble3 {
+    position: relative;
+    animation: floatBubble 8.5s infinite  normal ease-out;
+    z-index: 800;
+}
+
+#bubble4 {
+    position: relative;
+    float: right;
+    animation: floatBubble 11s infinite  normal ease-out;
+    z-index: 1000;
+}
+
+#bubble5 {
+    position: relative;
+    float: right;
+    animation: floatBubble 7s infinite  normal ease-out;
+    z-index: 800;
+}
+
+#bubble6 {
+    position: relative;
+    float: right;
+    animation: floatBubble 10s infinite  normal ease-out;
+    z-index: 900;
+}
+
+
+@-webkit-keyframes floatBubble {
+    0% {
+        top:2000px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+@keyframes floatBubble {
+    0% {
+        top:2000px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+/* --------- /. bubbles */
+
+/* --------- /. Welcome Page */
+
+
+/* --------- Game Page */
+/* --------- Heading and welcome area */
+
+.welcome-container {
+    text-align: center;
+    background-color: rgb(0 123 255 / 50%);
+    padding: 50px 50px 20px 50px;
+    width: 100%;
+    z-index: 1;
+}
+
+.game-instructions {
+    text-align: center;
+    background: rgb(0 123 255 / 89%);
+    margin-top: 20px;
+}
+
+/* --------- Modals */
+.modal-content {
+    background-color: #004085;
+}
+
+.modal-title {
+    flex: auto;
+}
+
+.close {
+    color: #e9f4ff
+}
+
+.show {
+	visibility: visible !important;
+	opacity: 100;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+/* --------- score area and countdown*/
+.score-area {
+    margin-top: 10px;
+    height: 10vh;
+    background: #004085;
+    padding: 20px;
+    text-align: center;
+}
+
+/* --------- Game area */
+.game-container {
+    background-color: #044e156b;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    margin-top: 15px;
+    position: relative;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.gamegrid {
+    display: grid;
+    padding: 20px;
+    justify-content: center;
+    grid-template-columns: repeat(4, auto);
+    position: relative;
+    grid-gap: 10px;
+    perspective: 1000px;
+}
+
+/* --------- Tiles */
+
+.tiles {
+    list-style-type: none;
+    width: 85%;
+    background: #716F71;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.game-tile {
+    display: inline;
+    height: 150px;
+    width: 150px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    border-radius: 10px;
+
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: inherit;
+}
+
+@media only screen and (max-width: 600px) {
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+    }
+
+    .gamegrid {
+        padding: 10px;
+        justify-content: center;
+        grid-template-columns: repeat(4, auto);
+    }
+
+    .game-tile {
+        height: 75px;
+        width: 75px;
+    }
+}
+
+.tile-front-face,
+.tile-back-face {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.tile-front-face,
+.tile-back-face:hover {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #e9f4ff;
+}
+
+.tile-front-face {
+    transform: rotateY(180deg);
+}
+
+.game-tile.turnTileOver {
+    transform: rotateY(180deg);
+}
+
+/* --------- /. Tiles */
+
+.game-rules {
+    text-align: center;
+    background-color: #004085;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    position: relative;
+    margin-top: 50px;
+    z-index: 10;
+}
+
+/* --------- /. Game Page */
